@@ -15,10 +15,11 @@ $('div.wrapper').on('click', 'div.gold a.calc', function() {
 		result = input * 1 + 6.87;
 		
 		if(result <= 20) {
+			$('div.silver div.result').css({'background-color': 'rgba(140, 140, 140, 0.3)'});
 			$('div.gold div.result p').text(result.toFixed(1));
 			$('div.gold p.comment').text('На такий бал має бути ваш твір');
 		} else {
-			$('div.gold div.result').css({'background-color': 'red'});
+			$('div.gold div.result').css({'background-color': 'rgba(255, 26, 26, 0.5)'});
 			$('div.gold div.result p').text('༼ ºل͟º ༽');
 			$('div.gold p.comment').text('Медалі не буде');
 		}
@@ -50,10 +51,11 @@ $('div.wrapper').on('click', 'div.silver a.calc', function() {
 		result = input * 1 + 1.65;
 		
 		if(result <= 20) {
+			$('div.silver div.result').css({'background-color': 'rgba(140, 140, 140, 0.3)'});
 			$('div.silver div.result p').text(result.toFixed(1));
 			$('div.silver p.comment').text('На такий бал має бути ваш твір');
 		} else {
-			$('div.silver div.result').css({'background-color': 'red'});
+			$('div.silver div.result').css({'background-color': 'rgba(255, 26, 26, 0.5)'});
 			$('div.silver div.result p').text('༼ ºل͟º ༽');
 			$('div.silver p.comment').text('Медалі не буде');
 		}
