@@ -116,9 +116,44 @@ a.calc {
 }
 div.gold a.calc {
 	background-color: rgba(255, 212, 0, 0.8);
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	transition: 0.5s all ease;
+	border-bottom: 2px solid rgba(214, 178, 0, 0.8);
+	
+}
+div.gold a.calc:hover {
+	background-color: rgba(243, 202, 0, 0.8);
+	-webkit-transition: 0.2s all ease;
+	-moz-transition: 0.2s all ease;
+	-o-transition: 0.2s all ease;
+	transition: 0.2s all ease;
+}
+div.gold a.calc:active {
+	margin-top: -3px;
+	margin-bottom: -2px;
+	border-bottom: 0 solid rgba(214, 178, 0, 0.8);
 }
 div.silver a.calc {
 	background-color: rgba(192,192,192, 0.8);
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	transition: 0.5s all ease;
+	border-bottom: 2px solid rgba(160, 160, 160, 0.8);
+}
+div.silver a.calc:hover {
+	background-color: rgba(180, 180, 180, 0.8);
+	-webkit-transition: 0.2s all ease;
+	-moz-transition: 0.2s all ease;
+	-o-transition: 0.2s all ease;
+	transition: 0.2s all ease;
+}
+div.silver a.calc:active {
+	margin-top: -3px;
+	margin-bottom: -2px;
+	border-bottom: 0 solid rgba(160, 160, 160, 0.8);
 }
 div.result {
 	width: 250px;
@@ -241,4 +276,42 @@ p.comment {
 	-o-transition: 3.5s all ease;
 	transition: 3.5s all ease;
 	opacity: 0;
+}
+a.hug {
+	display: block;
+	margin-top: 30px;
+	margin-left: 325px;
+	width: 250px;
+	height: 70px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 2em;
+	background-color: #252525;
+	color: #bbb;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	cursor: pointer;
+	text-decoration: none;
+	opacity: 0;
+	-webkit-transition: 3.5s all ease;
+	-moz-transition: 3.5s all ease;
+	-o-transition: 3.5s all ease;
+	transition: 3.5s all ease;
+}
+footer {
+	width: 100%;
+	min-width: 900px;
+	padding: 10px -webkit-calc((100% - 800px) / 2) 10px -webkit-calc((100% - 800px) / 2);
+	padding: 10px -moz-calc((100% - 800px) / 2) 10px -moz-calc((100% - 800px) / 2);
+	padding: 10px calc((100% - 800px) / 2) 10px calc((100% - 800px) / 2);
+	text-align: right;
+	font-family: "Caviar Dreams", Arial, sans-serif;
+	font-size: 1.2em;
+	color: #f7f7f7;
+	background-color: rgba(50, 50, 50, 0.89);
+}
+footer a {
+	font-family: "Caviar Dreams", Arial, sans-serif;
+	color: rgba(255, 212, 0, 1);
 }

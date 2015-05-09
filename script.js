@@ -12,7 +12,7 @@ $('div.wrapper').on('click', 'div.gold a.calc', function() {
 		
 		$('div.input-block input').removeClass('error');
 		
-		result = input * 1 + 6.87;
+		result = input * 1 + 6.88;
 		
 		if(result <= 20) {
 			$('div.silver div.result').css({'background-color': 'rgba(140, 140, 140, 0.3)'});
@@ -35,7 +35,7 @@ $('div.wrapper').on('click', 'div.gold a.calc', function() {
 		$('div.gold p.comment').css({
 			'opacity': '1'
 		});
-		
+		$('a.hug').css({'opacity': '1'});
 	} else {
 		$('div.input-block input').addClass('error');
 	}
@@ -71,7 +71,7 @@ $('div.wrapper').on('click', 'div.silver a.calc', function() {
 		$('div.silver p.comment').css({
 			'opacity': '1'
 		});
-		
+		$('a.hug').css({'opacity': '1'});
 	} else {
 		$('div.input-block input').addClass('error');
 	}
