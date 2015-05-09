@@ -1,3 +1,7 @@
+@font-face {
+	font-family: Kobzar;
+	src: url("res/KobzarKS/KobzarKS.otf");
+}
 * {
 	vertical-align: top;
 	margin: 0;
@@ -5,7 +9,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	font-family: "Caviar Dreams", Arial, sans-serif;
+	font-family: Kobzar, Arial, sans-serif;
 }
 header, footer, p, h1, h2, h3, li {
 	cursor: default;
@@ -18,7 +22,7 @@ header {
 	min-width: 900px;
 	padding: 10px;
 	text-align: center;
-	font-size: 2.5em;
+	font-size: 4em;
 	color: #fafafa;
 	background-color: rgba(255, 245, 105, 0.85);
 }
@@ -28,6 +32,8 @@ div.wrapper {
 	margin-left: -webkit-calc((100% - 900px) / 2);
 	margin-left: -moz-calc((100% - 900px) / 2);
 	margin-left: calc((100% - 900px) / 2);
+	margin-bottom: 10px;
+	padding-bottom: 30px;
 	background-color: rgba(255,251,183, 0.7);
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -35,51 +41,181 @@ div.wrapper {
 }
 div.input-block {
 	width: 900px;
-	height: 200px;
+	height: 250px;
 }
 div.input-block div {
 	display: inline-block;
 	width: 400px;
-	height: 200px;
+	height: 250px;
 	margin-left: 120px;
 	text-align: center;
 }
 div.input-block div p {
 	display: table-cell;
-	height: 200px;
+	height: 250px;
 	vertical-align: middle;
-	font-size: 1.4em;
+	line-height: 45px;
+	font-size: 2.1em;
 	color: #fafafa;
 }
 div.input-block input {
 	display: inline-block;
 	width: 100px;
 	height: 70px;
-	margin-top: 65px;
+	margin-top: 90px;
 	margin-left: 120px;
 	padding: 10px;
-	font-size: 3em;
+	text-align: center;
+	font-family: "Caviar Dreams", Arial, sans-serif;
+	font-size: 3.1em;
 	color: #fafafa;
+	background-color: rgba(250, 250, 250, 0.4);
+	border: 1px solid rgba(250, 250, 250, 0.8);
+/*
 	background-color: rgba(255,107,115, 0.4);
 	border: 1px solid rgba(255,107,115, 0.7);
+*/
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	outline: none;
+	
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	transition: 0.5s all ease;
+}
+div.input-block input.error {
+	background-color: rgba(255,107,115, 0.4);
+	border: 1px solid rgba(255,107,115, 0.7);
 }
 a.calc {
 	display: block;
-	margin-top: 20px;
+	margin-top: -5px;
 	margin-left: 350px;
 	width: 200px;
 	height: 60px;
 	text-align: center;
-	line-height: 60px;
-	font-size: 2em;
+	line-height: 45px;
+	font-size: 2.1em;
 	color: #fafafa;
-	background-color: cyan;
+	background-color: rgba(255, 212, 0, 0.8);
 	-webkit-border-radius: 7px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
 	cursor: pointer;
+}
+div.result {
+	width: 250px;
+	height: 250px;
+	margin: 40px 0 0 325px;
+	-webkit-box-shadow: 0 0 0px 2px rgba(255, 212, 0, 0.8);
+	-moz-box-shadow: 0 0 0px 2px rgba(255, 212, 0, 0.8);
+	box-shadow: 0 0 0px 2px rgba(255, 212, 0, 0.8);
+	-webkit-border-radius: 0 0 8px 8px;
+	-moz-border-radius: 0 0 8px 8px;
+	border-radius: 0 0 8px 8px;
+}
+
+@-webkit-keyframes movingUp {
+	0% {
+		margin-top: 0;
+	}
+	50% {
+		margin-top: -90px;
+	}
+	100% {
+		margin-top: -250px;
+	}
+}
+
+@-moz-keyframes movingUp {
+	0% {
+		margin-top: 0;
+	}
+	50% {
+		margin-top: -90px;
+	}
+	100% {
+		margin-top: -250px;
+	}
+}
+
+@-o-keyframes movingUp {
+	0% {
+		margin-top: 0;
+	}
+	50% {
+		margin-top: -90px;
+	}
+	100% {
+		margin-top: -250px;
+	}
+}
+
+@keyframes movingUp {
+	0% {
+		margin-top: 0;
+	}
+	50% {
+		margin-top: -90px;
+	}
+	100% {
+		margin-top: -250px;
+	}
+}
+
+div.result div.image-holder {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	-webkit-border-radius: 0 0 8px 8px;
+	-moz-border-radius: 0 0 8px 8px;
+	border-radius: 0 0 8px 8px;
+	overflow: hidden;
+	z-index: 3;
+}
+div.result img {
+	position: absolute;
+	height: 250px;
+	margin-top: 0;
+	-webkit-border-radius: 0 0 8px 8px;
+	-moz-border-radius: 0 0 8px 8px;
+	border-radius: 0 0 8px 8px;
+	
+	-webkit-animation-iteration-count: 1;
+	-moz-animation-iteration-count: 1;
+	-o-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+	
+/*
+	-webkit-animation: movingUp 7s;
+	-moz-animation: movingUp 7s;
+	-o-animation: movingUp 7s;
+	animation: movingUp 7s;
+*/
+}
+div.result p {
+	position: absolute;
+	display: block;
+	width: 250px;
+	height: 250px;
+	text-align: center;
+	line-height: 250px;
+	font-family: "Caviar Dreams", Arial, sans-serif;
+	font-size: 5em;
+	color: #fafafa;
+	background-color: rgba(140, 140, 140, 0.3);
+	z-index: 2;
+}
+p.comment {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 2em;
+	color: #fafafa;
+	-webkit-transition: 3.5s all ease;
+	-moz-transition: 3.5s all ease;
+	-o-transition: 3.5s all ease;
+	transition: 3.5s all ease;
+	opacity: 0;
 }
