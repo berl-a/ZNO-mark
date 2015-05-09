@@ -22,6 +22,8 @@ header {
 	min-width: 900px;
 	padding: 10px;
 	text-align: center;
+	height: 90px;
+	line-height: 35px;
 	font-size: 4em;
 	color: #fafafa;
 	background-color: rgba(255, 245, 105, 0.85);
@@ -42,6 +44,7 @@ div.wrapper {
 div.input-block {
 	width: 900px;
 	height: 250px;
+	margin-bottom: 10px;
 }
 div.input-block div {
 	display: inline-block;
@@ -89,32 +92,49 @@ div.input-block input.error {
 	background-color: rgba(255,107,115, 0.4);
 	border: 1px solid rgba(255,107,115, 0.7);
 }
+div.gold, div.silver {
+	display: inline-block;
+	width: 450px;
+}
 a.calc {
 	display: block;
 	margin-top: -5px;
-	margin-left: 350px;
+	margin-left: 125px;
 	width: 200px;
 	height: 60px;
 	text-align: center;
 	line-height: 45px;
 	font-size: 2.1em;
 	color: #fafafa;
-	background-color: rgba(255, 212, 0, 0.8);
 	-webkit-border-radius: 7px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
 	cursor: pointer;
 }
+div.gold a.calc {
+	background-color: rgba(255, 212, 0, 0.8);
+}
+div.silver a.calc {
+	background-color: rgba(192,192,192, 0.8);
+}
 div.result {
 	width: 250px;
 	height: 250px;
-	margin: 40px 0 0 325px;
-	-webkit-box-shadow: 0 0 0px 2px rgba(255, 212, 0, 0.8);
-	-moz-box-shadow: 0 0 0px 2px rgba(255, 212, 0, 0.8);
-	box-shadow: 0 0 0px 2px rgba(255, 212, 0, 0.8);
+	margin: 20px 0 0 100px;
+	
 	-webkit-border-radius: 0 0 8px 8px;
 	-moz-border-radius: 0 0 8px 8px;
 	border-radius: 0 0 8px 8px;
+}
+div.gold div.result {
+	-webkit-box-shadow: 0 0 0px 2px rgba(255, 212, 0, 0.8);
+	-moz-box-shadow: 0 0 0px 2px rgba(255, 212, 0, 0.8);
+	box-shadow: 0 0 0px 2px rgba(255, 212, 0, 0.8);
+}
+div.silver div.result {
+	-webkit-box-shadow: 0 0 0px 2px rgba(192,192,192, 0.8);
+	-moz-box-shadow: 0 0 0px 2px rgba(192,192,192, 0.8);
+	box-shadow: 0 0 0px 2px rgba(192,192,192, 0.8);
 }
 
 @-webkit-keyframes movingUp {
